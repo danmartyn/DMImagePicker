@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AB05C5F16A84F9100D1B450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C5E16A84F9100D1B450 /* UIKit.framework */; };
+		1AB05C6116A84F9100D1B450 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C6016A84F9100D1B450 /* Foundation.framework */; };
+		1AB05C6316A84F9100D1B450 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C6216A84F9100D1B450 /* CoreGraphics.framework */; };
+		1AB05C6916A84F9100D1B450 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C6716A84F9100D1B450 /* InfoPlist.strings */; };
+		1AB05C6B16A84F9100D1B450 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB05C6A16A84F9100D1B450 /* main.m */; };
+		1AB05C6F16A84F9100D1B450 /* DMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB05C6E16A84F9100D1B450 /* DMAppDelegate.m */; };
+		1AB05C7116A84F9100D1B450 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C7016A84F9100D1B450 /* Default.png */; };
+		1AB05C7316A84F9100D1B450 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C7216A84F9100D1B450 /* Default@2x.png */; };
+		1AB05C7516A84F9100D1B450 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C7416A84F9100D1B450 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AB05C5A16A84F9100D1B450 /* DMImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB05C5E16A84F9100D1B450 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1AB05C6016A84F9100D1B450 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AB05C6216A84F9100D1B450 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1AB05C6616A84F9100D1B450 /* DMImagePicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DMImagePicker-Info.plist"; sourceTree = "<group>"; };
+		1AB05C6816A84F9100D1B450 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AB05C6A16A84F9100D1B450 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AB05C6C16A84F9100D1B450 /* DMImagePicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DMImagePicker-Prefix.pch"; sourceTree = "<group>"; };
+		1AB05C6D16A84F9100D1B450 /* DMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DMAppDelegate.h; sourceTree = "<group>"; };
+		1AB05C6E16A84F9100D1B450 /* DMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DMAppDelegate.m; sourceTree = "<group>"; };
+		1AB05C7016A84F9100D1B450 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1AB05C7216A84F9100D1B450 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1AB05C7416A84F9100D1B450 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AB05C5716A84F9100D1B450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB05C5F16A84F9100D1B450 /* UIKit.framework in Frameworks */,
+				1AB05C6116A84F9100D1B450 /* Foundation.framework in Frameworks */,
+				1AB05C6316A84F9100D1B450 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AB05C4F16A84F9100D1B450 = {
+			isa = PBXGroup;
+			children = (
+				1AB05C6416A84F9100D1B450 /* DMImagePicker */,
+				1AB05C5D16A84F9100D1B450 /* Frameworks */,
+				1AB05C5B16A84F9100D1B450 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AB05C5B16A84F9100D1B450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C5A16A84F9100D1B450 /* DMImagePicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AB05C5D16A84F9100D1B450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C5E16A84F9100D1B450 /* UIKit.framework */,
+				1AB05C6016A84F9100D1B450 /* Foundation.framework */,
+				1AB05C6216A84F9100D1B450 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AB05C6416A84F9100D1B450 /* DMImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C6D16A84F9100D1B450 /* DMAppDelegate.h */,
+				1AB05C6E16A84F9100D1B450 /* DMAppDelegate.m */,
+				1AB05C6516A84F9100D1B450 /* Supporting Files */,
+			);
+			path = DMImagePicker;
+			sourceTree = "<group>";
+		};
+		1AB05C6516A84F9100D1B450 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C6616A84F9100D1B450 /* DMImagePicker-Info.plist */,
+				1AB05C6716A84F9100D1B450 /* InfoPlist.strings */,
+				1AB05C6A16A84F9100D1B450 /* main.m */,
+				1AB05C6C16A84F9100D1B450 /* DMImagePicker-Prefix.pch */,
+				1AB05C7016A84F9100D1B450 /* Default.png */,
+				1AB05C7216A84F9100D1B450 /* Default@2x.png */,
+				1AB05C7416A84F9100D1B450 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AB05C5916A84F9100D1B450 /* DMImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AB05C7816A84F9100D1B450 /* Build configuration list for PBXNativeTarget "DMImagePicker" */;
+			buildPhases = (
+				1AB05C5616A84F9100D1B450 /* Sources */,
+				1AB05C5716A84F9100D1B450 /* Frameworks */,
+				1AB05C5816A84F9100D1B450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DMImagePicker;
+			productName = DMImagePicker;
+			productReference = 1AB05C5A16A84F9100D1B450 /* DMImagePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AB05C5116A84F9100D1B450 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DM;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Dan Martyn";
+			};
+			buildConfigurationList = 1AB05C5416A84F9100D1B450 /* Build configuration list for PBXProject "DMImagePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1AB05C4F16A84F9100D1B450;
+			productRefGroup = 1AB05C5B16A84F9100D1B450 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AB05C5916A84F9100D1B450 /* DMImagePicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AB05C5816A84F9100D1B450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB05C6916A84F9100D1B450 /* InfoPlist.strings in Resources */,
+				1AB05C7116A84F9100D1B450 /* Default.png in Resources */,
+				1AB05C7316A84F9100D1B450 /* Default@2x.png in Resources */,
+				1AB05C7516A84F9100D1B450 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AB05C5616A84F9100D1B450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AB05C6B16A84F9100D1B450 /* main.m in Sources */,
+				1AB05C6F16A84F9100D1B450 /* DMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AB05C6716A84F9100D1B450 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AB05C6816A84F9100D1B450 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AB05C7616A84F9100D1B450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AB05C7716A84F9100D1B450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AB05C7916A84F9100D1B450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DMImagePicker/DMImagePicker-Prefix.pch";
+				INFOPLIST_FILE = "DMImagePicker/DMImagePicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AB05C7A16A84F9100D1B450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DMImagePicker/DMImagePicker-Prefix.pch";
+				INFOPLIST_FILE = "DMImagePicker/DMImagePicker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AB05C5416A84F9100D1B450 /* Build configuration list for PBXProject "DMImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB05C7616A84F9100D1B450 /* Debug */,
+				1AB05C7716A84F9100D1B450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AB05C7816A84F9100D1B450 /* Build configuration list for PBXNativeTarget "DMImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AB05C7916A84F9100D1B450 /* Debug */,
+				1AB05C7A16A84F9100D1B450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AB05C5116A84F9100D1B450 /* Project object */;
+}
