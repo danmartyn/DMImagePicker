@@ -11,7 +11,7 @@
 #import "UIImageExtras.h"
 
 @interface DMDemoViewController () <DMImagePickerControllerDelegate>
-
+@property (nonatomic, strong) NSArray *images;
 @end
 
 @implementation DMDemoViewController
@@ -21,7 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    self.images = @[];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +39,8 @@
     picker.delegate = self;
     picker.modalPresentationStyle = UIModalPresentationCurrentContext;
     picker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    picker.selectedImages = self.images.mutableCopy;
+    picker.maxSelectableImages = 5;
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:picker];
     [self presentViewController:navController animated:YES completion:nil];
@@ -57,16 +60,14 @@
 
 - (void)userCancelledPickingImages
 {
-    NSLog(@"user cancelled");
     [self dismissViewControllerAnimated:YES completion:nil];
-    // TODO: dismiss image picker
 }
 
 - (void)userPickedImages:(NSArray *)pickedImages
 {
-    NSLog(@"user picked %d images", pickedImages.count);
     [self dismissViewControllerAnimated:YES completion:^{
-//        NSLog(@"pickedImages contains\n%@", pickedImages);
+        self.images = pickedImages;
+        
         NSDictionary *image = pickedImages[0];
         
         CGSize originalImageViewFrameSize = self.originalImageView.frame.size;

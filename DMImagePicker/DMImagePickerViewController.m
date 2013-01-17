@@ -13,7 +13,6 @@
 #define kCellHeight 75.0
 
 @interface DMImagePickerViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-@property (nonatomic, strong) NSMutableArray *selectedImages;
 @property (nonatomic, strong) UIBarButtonItem *doneButton;
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, assign) BOOL isShowingCameraRoll;
@@ -81,6 +80,8 @@
         
         // add the collection view to the subview
         [self.view addSubview:self.collectionView];
+        
+        self.isShowingCameraRoll = YES;
     }
     
     return self;
@@ -92,8 +93,7 @@
 {
     [super viewDidLoad];
     
-    self.selectedImages = @[].mutableCopy;
-    self.isShowingCameraRoll = YES;
+    NSLog(@"max selectable photos = %d", self.maxSelectableImages);
 }
 
 - (void)didReceiveMemoryWarning

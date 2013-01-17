@@ -17,5 +17,7 @@
 @interface DMImagePickerViewController : UIViewController
 
 @property (nonatomic, weak) id<DMImagePickerControllerDelegate> delegate;
+@property (nonatomic, strong) NSMutableArray *selectedImages;
+@property (nonatomic) NSUInteger maxSelectableImages;
 
 @end
