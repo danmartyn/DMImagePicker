@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="MXM-lA-Ieu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9FL-cr-iQj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Demo View Controller-->
+        <!--Demo View Controller - DMImagePicker Demo-->
         <scene sceneID="hNh-g8-gm5">
             <objects>
                 <viewController id="MXM-lA-Ieu" customClass="DMDemoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7g-Hw-bDM">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-RJ-s8e">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Get Pictures">
+                                <state key="normal" title="Modal Image Picker">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -22,18 +22,55 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="getPictures:" destination="MXM-lA-Ieu" eventType="touchUpInside" id="Fj9-ZT-QOX"/>
+                                    <action selector="getPicturesModal:" destination="MXM-lA-Ieu" eventType="touchUpInside" id="bcd-o7-xQR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us7-rM-w0E">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Navigation Image Picker">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getPicturesNavigation:" destination="MXM-lA-Ieu" eventType="touchUpInside" id="M3Y-1b-Odt"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4xE-RJ-s8e" firstAttribute="centerX" secondItem="u7g-Hw-bDM" secondAttribute="centerX" type="default" id="9rV-5B-Y44"/>
-                            <constraint firstAttribute="bottom" secondItem="4xE-RJ-s8e" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="NGx-Tc-WTS"/>
+                            <constraint firstAttribute="bottom" secondItem="Us7-rM-w0E" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="9yl-kd-SVV"/>
+                            <constraint firstAttribute="trailing" secondItem="Us7-rM-w0E" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="S33-br-nwB"/>
+                            <constraint firstItem="4xE-RJ-s8e" firstAttribute="leading" secondItem="u7g-Hw-bDM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gKE-40-Yjs"/>
+                            <constraint firstAttribute="trailing" secondItem="4xE-RJ-s8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="u4u-vF-P3v"/>
+                            <constraint firstItem="Us7-rM-w0E" firstAttribute="leading" secondItem="u7g-Hw-bDM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vf3-eN-UBV"/>
+                            <constraint firstItem="Us7-rM-w0E" firstAttribute="top" secondItem="4xE-RJ-s8e" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yaQ-5Z-DNS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="DMImagePicker Demo" id="E7n-Am-SSV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOL-3o-IPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="58"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cNK-Xt-Qtv">
+            <objects>
+                <navigationController id="9FL-cr-iQj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="I7u-1X-sC9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MXM-lA-Ieu" kind="relationship" relationship="rootViewController" id="KmS-gJ-QG9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JLn-9A-Kff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="125" y="58"/>
         </scene>
@@ -42,7 +79,9 @@
         <class className="DMDemoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DMDemoViewController.h"/>
             <relationships>
-                <relationship kind="action" name="getPictures:"/>
+                <relationship kind="action" name="getPicturesModal:"/>
+                <relationship kind="action" name="getPicturesNavigation:"/>
+                <relationship kind="action" name="getPicturesPopover:"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

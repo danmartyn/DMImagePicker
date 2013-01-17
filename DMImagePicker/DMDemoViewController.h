@@ -10,6 +10,8 @@
 
 @interface DMDemoViewController : UIViewController
 
-- (IBAction)getPictures:(id)sender;
+- (IBAction)getPicturesModal:(id)sender;
+- (IBAction)getPicturesNavigation:(id)sender;
+- (IBAction)getPicturesPopover:(id)sender;
 
 @end

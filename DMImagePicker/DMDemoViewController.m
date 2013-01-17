@@ -30,9 +30,19 @@
 
 #pragma mark - Action Methods
 
-- (IBAction)getPictures:(id)sender
+- (IBAction)getPicturesModal:(id)sender
 {
-    NSLog(@"get pictures");
+    NSLog(@"get pictures modal");
+}
+
+- (IBAction)getPicturesNavigation:(id)sender
+{
+    NSLog(@"get pictures navigation");
+}
+
+- (IBAction)getPicturesPopover:(id)sender
+{
+    NSLog(@"get pictures popover");
 }
 
 @end
