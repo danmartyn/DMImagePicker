@@ -7,10 +7,11 @@
 //
 
 #import "DMImagePickerViewController.h"
-#import <ImageIO/ImageIO.h>
+#import "UIImageExtras.h"
 
 @interface DMImagePickerViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong) NSMutableArray *selectedImages;
+@property (nonatomic, strong) UIBarButtonItem *doneButton;
 @end
 
 @implementation DMImagePickerViewController
@@ -47,12 +48,12 @@
         UIBarButtonItem *segmentedControlbutton = [[UIBarButtonItem alloc] initWithCustomView:segmentedControl];
         
         UIBarButtonItem *flexibleSpace2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-        UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(pickedPictures)];
-        doneButton.style = UIBarButtonItemStyleDone;
-//        doneBurtton.enabled = NO;
+        self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(pickedPictures)];
+        self.doneButton.style = UIBarButtonItemStyleDone;
+        self.doneButton.enabled = NO;
         
         // add the buttons to the toolbar
-        [toolbar setItems:@[cameraButton, flexibleSpace, segmentedControlbutton, flexibleSpace2, doneButton]];
+        [toolbar setItems:@[cameraButton, flexibleSpace, segmentedControlbutton, flexibleSpace2, self.doneButton]];
         
         // add the toolbar to the view
         [self.view addSubview:toolbar];
@@ -71,6 +72,7 @@
     [super viewDidLoad];
     
     self.selectedImages = @[].mutableCopy;
+    self.doneButton.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -143,10 +145,11 @@
 
     UIImage *thumbnail = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-//    NSData *imageData = UIImagePNGRepresentation(thumbnail);
+    NSData *imageData = UIImagePNGRepresentation(thumbnail);
 //    [imageData writeToFile:fullPathToThumbImage atomically:YES];
 //    thumbnail = [UIImage imageWithContentsOfFile:fullPathToThumbImage];
-
+    thumbnail = [UIImage imageWithData:imageData];
+    
     return thumbnail;
 }
 
@@ -163,13 +166,14 @@
     [self dismissViewControllerAnimated:YES completion:^{
         // create the original and thumbnail images
         UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
-        UIImage *thumbnail = [self thumbnailFromImage:originalImage withLength:100.0];
+        UIImage *thumbnail = [originalImage imageByScalingAndCroppingForSize:CGSizeMake(100.0, 100.0)];
         
         // create a dictionary objec to hold these images
         NSDictionary *imageDictionary = @{@"original":originalImage, @"thumbnail":thumbnail};
         
         // add them to the selected array
         [self.selectedImages addObject:imageDictionary];
+        self.doneButton.enabled = YES;
     }];
 }
 

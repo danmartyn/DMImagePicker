@@ -8,6 +8,7 @@
 
 #import "DMDemoViewController.h"
 #import "DMImagePickerViewController.h"
+#import "UIImageExtras.h"
 
 @interface DMDemoViewController () <DMImagePickerControllerDelegate>
 
@@ -65,8 +66,14 @@
 {
     NSLog(@"user picked %d images", pickedImages.count);
     [self dismissViewControllerAnimated:YES completion:^{
-        // TODO: do something usefull with the pickedImages array
-        NSLog(@"pickedImages contains\n%@", pickedImages);
+//        NSLog(@"pickedImages contains\n%@", pickedImages);
+        NSDictionary *image = pickedImages[0];
+        
+        CGSize originalImageViewFrameSize = self.originalImageView.frame.size;
+        CGSize thumbnailImageViewFrameSize = self.thumbnailImageView.frame.size;
+        
+        self.originalImageView.image = [image[@"original"] imageByScalingAndCroppingForSize:originalImageViewFrameSize];
+        self.thumbnailImageView.image = [image[@"thumbnail"] imageByScalingAndCroppingForSize:thumbnailImageViewFrameSize];
     }];
 }
 

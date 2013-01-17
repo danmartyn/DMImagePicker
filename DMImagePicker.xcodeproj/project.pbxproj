@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A19ADEF16A852B2002555C1 /* DMImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A19ADEE16A852B2002555C1 /* DMImagePickerViewController.m */; };
+		1A19ADF516A873BA002555C1 /* UIImageExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A19ADF416A873BA002555C1 /* UIImageExtras.m */; };
 		1AB05C5F16A84F9100D1B450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C5E16A84F9100D1B450 /* UIKit.framework */; };
 		1AB05C6116A84F9100D1B450 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C6016A84F9100D1B450 /* Foundation.framework */; };
 		1AB05C6316A84F9100D1B450 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C6216A84F9100D1B450 /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		1A19ADED16A852B2002555C1 /* DMImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImagePickerViewController.h; sourceTree = "<group>"; };
 		1A19ADEE16A852B2002555C1 /* DMImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImagePickerViewController.m; sourceTree = "<group>"; };
+		1A19ADF316A873B1002555C1 /* UIImageExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageExtras.h; sourceTree = "<group>"; };
+		1A19ADF416A873BA002555C1 /* UIImageExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageExtras.m; sourceTree = "<group>"; };
 		1AB05C5A16A84F9100D1B450 /* DMImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB05C5E16A84F9100D1B450 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AB05C6016A84F9100D1B450 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,8 @@
 		1AB05C4F16A84F9100D1B450 = {
 			isa = PBXGroup;
 			children = (
+				1A19ADF316A873B1002555C1 /* UIImageExtras.h */,
+				1A19ADF416A873BA002555C1 /* UIImageExtras.m */,
 				1AB05C6416A84F9100D1B450 /* DMImagePicker */,
 				1AB05C7F16A8501A00D1B450 /* Demo */,
 				1AB05C5D16A84F9100D1B450 /* Frameworks */,
@@ -212,6 +217,7 @@
 				1AB05C6F16A84F9100D1B450 /* DMAppDelegate.m in Sources */,
 				1AB05C8716A850DE00D1B450 /* DMDemoViewController.m in Sources */,
 				1A19ADEF16A852B2002555C1 /* DMImagePickerViewController.m in Sources */,
+				1A19ADF516A873BA002555C1 /* UIImageExtras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

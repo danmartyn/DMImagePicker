@@ -38,11 +38,27 @@
                                     <action selector="getPicturesNavigation:" destination="MXM-lA-Ieu" eventType="touchUpInside" id="M3Y-1b-Odt"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="xnO-5g-CcD">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-tz-Tqq">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="0Vv-nt-k45"/>
+                                    <constraint firstAttribute="height" constant="75" id="x26-X9-O4j"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Us7-rM-w0E" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="9yl-kd-SVV"/>
+                            <constraint firstAttribute="trailing" secondItem="S2q-tz-Tqq" secondAttribute="trailing" constant="29" id="BQP-zh-ucT"/>
+                            <constraint firstItem="xnO-5g-CcD" firstAttribute="top" secondItem="u7g-Hw-bDM" secondAttribute="top" constant="20" symbolic="YES" type="default" id="ERg-dx-Zcx"/>
+                            <constraint firstAttribute="trailing" secondItem="xnO-5g-CcD" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FGt-3c-cNK"/>
+                            <constraint firstItem="xnO-5g-CcD" firstAttribute="leading" secondItem="u7g-Hw-bDM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RzS-5x-2xP"/>
                             <constraint firstAttribute="trailing" secondItem="Us7-rM-w0E" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="S33-br-nwB"/>
+                            <constraint firstItem="4xE-RJ-s8e" firstAttribute="top" secondItem="xnO-5g-CcD" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tln-P1-Sq3"/>
+                            <constraint firstAttribute="bottom" secondItem="S2q-tz-Tqq" secondAttribute="bottom" constant="129" id="X9A-Ej-8Zm"/>
                             <constraint firstItem="4xE-RJ-s8e" firstAttribute="leading" secondItem="u7g-Hw-bDM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="gKE-40-Yjs"/>
                             <constraint firstAttribute="trailing" secondItem="4xE-RJ-s8e" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="u4u-vF-P3v"/>
                             <constraint firstItem="Us7-rM-w0E" firstAttribute="leading" secondItem="u7g-Hw-bDM" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vf3-eN-UBV"/>
@@ -50,6 +66,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="DMImagePicker Demo" id="E7n-Am-SSV"/>
+                    <connections>
+                        <outlet property="originalImageView" destination="xnO-5g-CcD" id="QDz-wy-qD0"/>
+                        <outlet property="thumbnailImageView" destination="S2q-tz-Tqq" id="oPW-p7-wmy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOL-3o-IPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +102,8 @@
                 <relationship kind="action" name="getPicturesModal:"/>
                 <relationship kind="action" name="getPicturesNavigation:"/>
                 <relationship kind="action" name="getPicturesPopover:"/>
+                <relationship kind="outlet" name="originalImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="thumbnailImageView" candidateClass="UIImageView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

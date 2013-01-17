@@ -10,6 +10,9 @@
 
 @interface DMDemoViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UIImageView *originalImageView;
+@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
+
 - (IBAction)getPicturesModal:(id)sender;
 - (IBAction)getPicturesNavigation:(id)sender;
 - (IBAction)getPicturesPopover:(id)sender;
