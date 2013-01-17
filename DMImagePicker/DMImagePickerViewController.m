@@ -67,16 +67,17 @@
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
         flowLayout.itemSize = CGSizeMake(kCellWidth, kCellHeight);
-        flowLayout.minimumInteritemSpacing = 5.0f;
-        flowLayout.minimumLineSpacing = 5.0f;
+        flowLayout.minimumInteritemSpacing = 0.0f;
+        flowLayout.minimumLineSpacing = 2.0f;
+        flowLayout.sectionInset = UIEdgeInsetsMake(2.0f, 2.0f, 2.0f, 2.0f);
         
         CGRect collectionViewFrame = [[UIScreen mainScreen] bounds];
-        collectionViewFrame.origin.y = 44;
         collectionViewFrame.size.height -= 108;
         self.collectionView = [[UICollectionView alloc] initWithFrame:collectionViewFrame collectionViewLayout:flowLayout];
         self.collectionView.backgroundColor = [UIColor greenColor];
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
+        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Image Cell"];
         
         // add the collection view to the subview
         [self.view addSubview:self.collectionView];
@@ -124,13 +125,14 @@
 {
     switch (sender.selectedSegmentIndex) {
         case 0:
-            NSLog(@"all pictures (camera roll)");
+            self.isShowingCameraRoll = YES;
             break;
         case 1:
-            NSLog(@"selected pictures");
+            self.isShowingCameraRoll = NO;
         default:
             break;
     }
+    [self.collectionView reloadData];
 }
 
 - (void)pickedPictures
@@ -159,6 +161,8 @@
         // add them to the selected array
         [self.selectedImages addObject:imageDictionary];
         self.doneButton.enabled = YES;
+        
+        [self.collectionView reloadData];
     }];
 }
 
