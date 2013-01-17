@@ -1,0 +1,38 @@
+//
+//  DMDemoViewController.m
+//  DMImagePicker
+//
+//  Created by Daniel Martyn on 2013-01-17.
+//  Copyright (c) 2013 Dan Martyn. All rights reserved.
+//
+
+#import "DMDemoViewController.h"
+
+@interface DMDemoViewController ()
+
+@end
+
+@implementation DMDemoViewController
+
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action Methods
+
+- (IBAction)getPictures:(id)sender
+{
+    NSLog(@"get pictures");
+}
+
+@end

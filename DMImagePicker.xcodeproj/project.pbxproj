@@ -16,6 +16,9 @@
 		1AB05C7116A84F9100D1B450 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C7016A84F9100D1B450 /* Default.png */; };
 		1AB05C7316A84F9100D1B450 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C7216A84F9100D1B450 /* Default@2x.png */; };
 		1AB05C7516A84F9100D1B450 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C7416A84F9100D1B450 /* Default-568h@2x.png */; };
+		1AB05C8116A8503A00D1B450 /* Storyboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C8016A8503A00D1B450 /* Storyboard-iPhone.storyboard */; };
+		1AB05C8316A8504700D1B450 /* Storyboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB05C8216A8504700D1B450 /* Storyboard-iPad.storyboard */; };
+		1AB05C8716A850DE00D1B450 /* DMDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB05C8616A850DE00D1B450 /* DMDemoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		1AB05C7016A84F9100D1B450 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1AB05C7216A84F9100D1B450 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1AB05C7416A84F9100D1B450 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1AB05C8016A8503A00D1B450 /* Storyboard-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-iPhone.storyboard"; sourceTree = "<group>"; };
+		1AB05C8216A8504700D1B450 /* Storyboard-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Storyboard-iPad.storyboard"; sourceTree = "<group>"; };
+		1AB05C8516A850DE00D1B450 /* DMDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMDemoViewController.h; sourceTree = "<group>"; };
+		1AB05C8616A850DE00D1B450 /* DMDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMDemoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB05C6416A84F9100D1B450 /* DMImagePicker */,
+				1AB05C7F16A8501A00D1B450 /* Demo */,
 				1AB05C5D16A84F9100D1B450 /* Frameworks */,
 				1AB05C5B16A84F9100D1B450 /* Products */,
 			);
@@ -78,9 +86,6 @@
 		1AB05C6416A84F9100D1B450 /* DMImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				1AB05C6D16A84F9100D1B450 /* DMAppDelegate.h */,
-				1AB05C6E16A84F9100D1B450 /* DMAppDelegate.m */,
-				1AB05C6516A84F9100D1B450 /* Supporting Files */,
 			);
 			path = DMImagePicker;
 			sourceTree = "<group>";
@@ -97,6 +102,37 @@
 				1AB05C7416A84F9100D1B450 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1AB05C7F16A8501A00D1B450 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C6D16A84F9100D1B450 /* DMAppDelegate.h */,
+				1AB05C6E16A84F9100D1B450 /* DMAppDelegate.m */,
+				1AB05C8416A850C700D1B450 /* View */,
+				1AB05C8816A850E300D1B450 /* Controller */,
+				1AB05C6516A84F9100D1B450 /* Supporting Files */,
+			);
+			name = Demo;
+			path = DMImagePicker;
+			sourceTree = "<group>";
+		};
+		1AB05C8416A850C700D1B450 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C8016A8503A00D1B450 /* Storyboard-iPhone.storyboard */,
+				1AB05C8216A8504700D1B450 /* Storyboard-iPad.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1AB05C8816A850E300D1B450 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AB05C8516A850DE00D1B450 /* DMDemoViewController.h */,
+				1AB05C8616A850DE00D1B450 /* DMDemoViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +191,8 @@
 				1AB05C7116A84F9100D1B450 /* Default.png in Resources */,
 				1AB05C7316A84F9100D1B450 /* Default@2x.png in Resources */,
 				1AB05C7516A84F9100D1B450 /* Default-568h@2x.png in Resources */,
+				1AB05C8116A8503A00D1B450 /* Storyboard-iPhone.storyboard in Resources */,
+				1AB05C8316A8504700D1B450 /* Storyboard-iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +205,7 @@
 			files = (
 				1AB05C6B16A84F9100D1B450 /* main.m in Sources */,
 				1AB05C6F16A84F9100D1B450 /* DMAppDelegate.m in Sources */,
+				1AB05C8716A850DE00D1B450 /* DMDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
