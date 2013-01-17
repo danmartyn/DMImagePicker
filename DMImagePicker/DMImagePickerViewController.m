@@ -9,9 +9,14 @@
 #import "DMImagePickerViewController.h"
 #import "UIImageExtras.h"
 
-@interface DMImagePickerViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+#define kCellWidth  75.0
+#define kCellHeight 75.0
+
+@interface DMImagePickerViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSMutableArray *selectedImages;
 @property (nonatomic, strong) UIBarButtonItem *doneButton;
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, assign) BOOL isShowingCameraRoll;
 @end
 
 @implementation DMImagePickerViewController
@@ -59,7 +64,22 @@
         [self.view addSubview:toolbar];
         
         // add the collection views in the middle
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        flowLayout.itemSize = CGSizeMake(kCellWidth, kCellHeight);
+        flowLayout.minimumInteritemSpacing = 5.0f;
+        flowLayout.minimumLineSpacing = 5.0f;
         
+        CGRect collectionViewFrame = [[UIScreen mainScreen] bounds];
+        collectionViewFrame.origin.y = 44;
+        collectionViewFrame.size.height -= 108;
+        self.collectionView = [[UICollectionView alloc] initWithFrame:collectionViewFrame collectionViewLayout:flowLayout];
+        self.collectionView.backgroundColor = [UIColor greenColor];
+        self.collectionView.dataSource = self;
+        self.collectionView.delegate = self;
+        
+        // add the collection view to the subview
+        [self.view addSubview:self.collectionView];
     }
     
     return self;
@@ -72,7 +92,7 @@
     [super viewDidLoad];
     
     self.selectedImages = @[].mutableCopy;
-    self.doneButton.enabled = NO;
+    self.isShowingCameraRoll = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -140,6 +160,40 @@
         [self.selectedImages addObject:imageDictionary];
         self.doneButton.enabled = YES;
     }];
+}
+
+#pragma mark - UICollectionViewDataSource Methods
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    if (self.isShowingCameraRoll) {
+        // TODO: set how many items should be returned using ALAssets
+        return 0;
+    } else {
+        return self.selectedImages.count;
+    }
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Image Cell" forIndexPath:indexPath];
+    
+    // configure the cell
+    cell.backgroundColor = [UIColor purpleColor];
+    
+    return cell;
+}
+
+#pragma mark - UICollectionViewFlowLayoutDelegate Methods
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"selected cell %d", indexPath.row);
 }
 
 @end
