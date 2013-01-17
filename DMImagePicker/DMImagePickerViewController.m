@@ -118,41 +118,6 @@
     [self.delegate userPickedImages:self.selectedImages.copy];
 }
 
-#pragma mark - Helper Methods
-
-- (UIImage *)thumbnailFromImage:(UIImage *)originalImage withLength:(float)length
-{
-    BOOL widthGreaterThanHeight = (originalImage.size.width > originalImage.size.height);
-    float sideFull = (widthGreaterThanHeight) ? originalImage.size.height : originalImage.size.width;
-    CGRect clippedRect = CGRectMake(0, 0, sideFull, sideFull);
-    
-    //creating a square context the size of the final image which we will then
-    // manipulate and transform before drawing in the original image
-    UIGraphicsBeginImageContext(CGSizeMake(length, length));
-    CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    CGContextClipToRect(currentContext, clippedRect);
-    CGFloat scaleFactor = length/sideFull;
-    if (widthGreaterThanHeight) {
-        //a landscape image – make context shift the original image to the left when drawn into the context
-        CGContextTranslateCTM(currentContext, -(((originalImage.size.width - sideFull) / 2) * scaleFactor), 0);
-    }
-    else {
-        //a portfolio image – make context shift the original image upwards when drawn into the context
-        CGContextTranslateCTM(currentContext, 0, -(((originalImage.size.height - sideFull) / 2) * scaleFactor));
-    }
-    //this will automatically scale any CGImage down/up to the required thumbnail side (length) when the CGImage gets drawn into the context on the next line of code
-    CGContextScaleCTM(currentContext, scaleFactor, scaleFactor);
-
-    UIImage *thumbnail = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    NSData *imageData = UIImagePNGRepresentation(thumbnail);
-//    [imageData writeToFile:fullPathToThumbImage atomically:YES];
-//    thumbnail = [UIImage imageWithContentsOfFile:fullPathToThumbImage];
-    thumbnail = [UIImage imageWithData:imageData];
-    
-    return thumbnail;
-}
-
 #pragma mark - UIImagePickerControllerDelegate Methods
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
