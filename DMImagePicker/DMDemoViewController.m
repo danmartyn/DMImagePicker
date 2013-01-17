@@ -7,8 +7,9 @@
 //
 
 #import "DMDemoViewController.h"
+#import "DMImagePickerViewController.h"
 
-@interface DMDemoViewController ()
+@interface DMDemoViewController () <DMImagePickerControllerDelegate>
 
 @end
 
@@ -32,7 +33,13 @@
 
 - (IBAction)getPicturesModal:(id)sender
 {
-    NSLog(@"get pictures modal");
+    DMImagePickerViewController *picker = [[DMImagePickerViewController alloc] init];
+    picker.delegate = self;
+    picker.modalPresentationStyle = UIModalPresentationCurrentContext;
+    picker.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:picker];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 - (IBAction)getPicturesNavigation:(id)sender
@@ -45,4 +52,29 @@
     NSLog(@"get pictures popover");
 }
 
+#pragma mark - DMImagePickerControllerDelegate Methods
+
+- (void)userCancelledPickingImages
+{
+    NSLog(@"user cancelled");
+    [self dismissViewControllerAnimated:YES completion:nil];
+    // TODO: dismiss image picker
+}
+
+- (void)userPickedImages:(NSArray *)pickedImages
+{
+    NSLog(@"user picked %d images", pickedImages.count);
+    [self dismissViewControllerAnimated:YES completion:^{
+        // TODO: do something usefull with the pickedImages array
+        NSLog(@"pickedImages contains\n%@", pickedImages);
+    }];
+}
+
 @end
+
+
+
+
+
+
+
