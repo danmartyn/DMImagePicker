@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A19ADEF16A852B2002555C1 /* DMImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A19ADEE16A852B2002555C1 /* DMImagePickerViewController.m */; };
 		1AB05C5F16A84F9100D1B450 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C5E16A84F9100D1B450 /* UIKit.framework */; };
 		1AB05C6116A84F9100D1B450 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C6016A84F9100D1B450 /* Foundation.framework */; };
 		1AB05C6316A84F9100D1B450 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB05C6216A84F9100D1B450 /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A19ADED16A852B2002555C1 /* DMImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImagePickerViewController.h; sourceTree = "<group>"; };
+		1A19ADEE16A852B2002555C1 /* DMImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImagePickerViewController.m; sourceTree = "<group>"; };
 		1AB05C5A16A84F9100D1B450 /* DMImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB05C5E16A84F9100D1B450 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1AB05C6016A84F9100D1B450 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +89,8 @@
 		1AB05C6416A84F9100D1B450 /* DMImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				1A19ADED16A852B2002555C1 /* DMImagePickerViewController.h */,
+				1A19ADEE16A852B2002555C1 /* DMImagePickerViewController.m */,
 			);
 			path = DMImagePicker;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				1AB05C6B16A84F9100D1B450 /* main.m in Sources */,
 				1AB05C6F16A84F9100D1B450 /* DMAppDelegate.m in Sources */,
 				1AB05C8716A850DE00D1B450 /* DMDemoViewController.m in Sources */,
+				1A19ADEF16A852B2002555C1 /* DMImagePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +322,7 @@
 				1AB05C7A16A84F9100D1B450 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
