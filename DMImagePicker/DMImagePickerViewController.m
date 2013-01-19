@@ -188,7 +188,18 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Image Cell" forIndexPath:indexPath];
     
     // configure the cell
+    UIImage *thumbnail = [self.selectedImages[indexPath.row][@"thumbnail"] imageByScalingAndCroppingForSize:cell.bounds.size];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:thumbnail];
+    
+    [cell addSubview:imageView];
     cell.backgroundColor = [UIColor purpleColor];
+    
+    if (!self.isShowingCameraRoll) {
+        UIImage *selectedOverlay = [UIImage imageNamed:@"DMImageSelectedOverlay.png"];
+        UIImageView *overlayImageView = [[UIImageView alloc] initWithImage:selectedOverlay];
+        
+        [cell addSubview:overlayImageView];
+    }
     
     return cell;
 }
